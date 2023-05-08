@@ -1,36 +1,35 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
   container: {
-    position: "relative",
     flex: 1,
-    backgroundColor: "#fff",
-    justifyContent: 'flex-end',
+    backgroundColor: "#fff"
   },
   bgImage: {
     flex: 1,
     resizeMode: "cover",
-    justifyContent: "center",
+    justifyContent: "flex-end"
+  },
+  form: {
+    margineHorizontal: 16
   },
   wrapper: {
-    display: 'flex',
+    display: "flex",
     alignItems: "center",
     backgroundColor: "#fff",
     // // flexDirection: 'column',
     // justifyContent: "center",
     // position: "absolute",
-    top: 230,
-    // width: "100%",
-    // height: 549,
-    // borderTopLeftRadius: 25,
-    // borderTopRightRadius: 25,
-    // paddingTop: 32,
+    top: 260,
+    height: 549,
+    borderTopLeftRadius: 25,
+    borderTopRightRadius: 25,
+    paddingTop: 90
   },
   addPhoto: {
     position: "absolute",
     width: 120,
     height: 120,
-    // marginBottom: 32,
     top: 0,
     left: "50%",
     transform: [{ translateY: -50 }, { translateX: -50 }],
@@ -38,8 +37,7 @@ export const styles = StyleSheet.create({
     borderRadius: 16
   },
   title: {
-    marginTop: 60,
-    marginBottom: 32,
+    paddingBottom: 30,
     fontFamily: "Roboto",
     fontWeight: "bold",
     color: "#212121",
@@ -51,7 +49,7 @@ export const styles = StyleSheet.create({
   input: {
     width: 343,
     height: 50,
-    margin: 12,
+    marginBottom: 16,
     fontSize: 16,
     borderWidth: 1,
     padding: 16,
@@ -65,22 +63,21 @@ export const styles = StyleSheet.create({
     backgroundColor: "#FF6C00",
     borderRadius: 100,
     paddingVertical: 16,
-    marginTop:40,
+    marginTop: 35,
     outline: "none",
     alignItems: "center",
-    justifyContent: "center",
-    // paddingLeft:16
-  }, 
+    justifyContent: "center"
+  },
   textBtn: {
     fontSize: 16,
     lineHeight: 19,
     fontWeight: "bold",
     letterSpacing: 0.25,
     color: "#FFFFFF"
-  }, 
-  isUserTitle:{
+  },
+  isUserTitle: {
     fontSize: 16,
-    marginTop:15,
+    marginTop: 15,
     lineHeight: 19,
     color: "#1B4371",
     alignItems: "center",

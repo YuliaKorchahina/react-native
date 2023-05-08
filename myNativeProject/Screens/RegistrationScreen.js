@@ -5,7 +5,7 @@ import {
   View,
   ImageBackground,
   TextInput,
-  Pressable,
+  TouchableOpacity,
   KeyboardAvoidingView,
   Platform,
   TouchableWithoutFeedback,
@@ -13,7 +13,6 @@ import {
 } from "react-native";
 import bg from "../assets/images/photo_bg.png";
 import { styles } from "../styles/styles";
-// const image = ../assets/photo_BG
 
 const bodyText = "Registration";
 export const RegistrationScreen = () => {
@@ -27,43 +26,46 @@ export const RegistrationScreen = () => {
           >
             <View
               style={{
-                ...styles.wrapper,
+                ...styles.form,
                 marginBottom: isShowKeyBord ? 20 : 100
               }}
             >
-              <View style={styles.addPhoto}></View>
-              <Text style={styles.title}>{bodyText}</Text>
-              <TextInput
-                style={styles.input}
-                // onChangeText={onChangeNumber}
-                // value={number}
-                placeholder='Enter login'
-              />
-              <TextInput
-                style={styles.input}
-                // onChangeText={onChangeNumber}
-                // value={number}
-                placeholder='Enter email'
-              />
-              <TextInput
-                style={styles.input}
-                // onChangeText={onChangeNumber}
-                // value={number}
-                onFocus={() => {
-                  setIsShowKeyBord(true);
-                  //  setEmailBorderColor(accentBorderColor);
-                }}
-                placeholder='Enter password'
-              />
-              <Pressable
-                style={styles.registerBtn}
-                onPress={() => alert(" button pressed")}
-              >
-                <Text style={styles.textBtn}>To register</Text>
-              </Pressable>
-              <Text style={styles.isUserTitle}>
-                Already have an account? Enter
-              </Text>
+              <View style={styles.wrapper}>
+                <View style={styles.addPhoto}></View>
+                <Text style={styles.title}>{bodyText}</Text>
+                <TextInput
+                  style={styles.input}
+                  // onChangeText={onChangeNumber}
+                  // value={number}
+                  placeholder='Enter login'
+                />
+                <TextInput
+                  style={styles.input}
+                  // onChangeText={onChangeNumber}
+                  // value={number}
+                  placeholder='Enter email'
+                />
+                <TextInput 
+                  style={styles.input}
+                  secureTextEntry={true}
+                  // onChangeText={onChangeNumber}
+                  // value={number}
+                  onFocus={() => {
+                    setIsShowKeyBord(true);
+                    //  setEmailBorderColor(accentBorderColor);
+                  }}
+                  placeholder='Enter password'
+                />
+                <TouchableOpacity
+                  style={styles.registerBtn}
+                  onPress={() => alert(" button pressed")}
+                >
+                  <Text style={styles.textBtn}>To register</Text>
+                </TouchableOpacity>
+                <Text style={styles.isUserTitle}>
+                  Already have an account? Enter
+                </Text>
+              </View>
             </View>
           </KeyboardAvoidingView>
         </ImageBackground>
