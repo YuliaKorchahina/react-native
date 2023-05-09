@@ -11,26 +11,22 @@ export const styles = StyleSheet.create({
     justifyContent: "flex-end"
   },
   form: {
-    margineHorizontal: 16
+    mrgineHorizontal: 16,
   },
   wrapper: {
-    display: "flex",
-    alignItems: "center",
-    backgroundColor: "#fff",
-    // // flexDirection: 'column',
-    // justifyContent: "center",
-    // position: "absolute",
-    top: 260,
-    height: 549,
+    alignItems: 'center',
     borderTopLeftRadius: 25,
     borderTopRightRadius: 25,
-    paddingTop: 90
+    paddingTop: 92,
+    paddingBottom: 90,
+    backgroundColor: '#FFFFFF',
+    paddingHorizontal: 16,
   },
   addPhoto: {
     position: "absolute",
     width: 120,
     height: 120,
-    top: 0,
+    // top: 0,
     left: "50%",
     transform: [{ translateY: -50 }, { translateX: -50 }],
     backgroundColor: "#F6F6F6",
